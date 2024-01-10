@@ -27,7 +27,7 @@ chmod +x "$install_dir/hbbs"
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
-
+ynh_add_nginx_config
 ynh_add_systemd_config --service=rustdeskrelay --template=rustdeskrelay.service
 ynh_add_systemd_config --service=rustdesksignal --template=rustdesksignal.service
 
